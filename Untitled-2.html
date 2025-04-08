@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataBoss Inc. | Strategic Partnerships for Business Transformation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4B0082;  /* Deep Royal Purple */
+            --primary-light: #6A3CB5; /* Lighter Purple */
+            --secondary: #DCB500; /* Golden Yellow */
+            --accent: #A485DD;    /* Light Purple */
+            --accent-dark: #8A6DD1; /* Darker Light Purple */
+            --light: #FAF8F1;     /* Cream */
+            --dark: #121926;
+            --gray: #4b5563;
+            --light-gray: #e5e7eb;
+            --white: #ffffff;
+            --text: #FAF8F1;      /* Cream */
+            --card-bg: rgba(75, 0, 130, 0.9);
+            --gradient-1: linear-gradient(135deg, #4B0082 0%, #DCB500 100%);
+            --gradient-2: linear-gradient(135deg, #A485DD 0%, #DCB500 100%);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-1);
+            padding: 12rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            color: var(--text);
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .hero h2 {
+            color: var(--secondary);
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 1rem;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-2);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Value Propositions */
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 4px solid var(--secondary);
+            color: var(--text);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .value-card p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .value-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            color: var(--primary);
+            border-radius: 50%;
+            line-height: 50px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        /* Commitment Section */
+        .commitment {
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .commitment:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background-color: var(--primary-light);
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .commitment-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .commitment-item {
+            margin-bottom: 3rem;
+        }
+
+        .commitment-item h4 {
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .commitment-item h4 i {
+            margin-right: 1rem;
+            color: var(--secondary);
+        }
+
+        .commitment-item p {
+            font-size: 1.125rem;
+            padding-left: 3rem;
+        }
+
+        /* Partners Carousel Section */
+        .partners-section {
+            background-color: var(--white);
+            text-align: center;
+            padding: 6rem 0;
+            overflow: hidden;
+        }
+
+        .carousel-row {
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .scroll-track {
+            display: inline-flex;
+            white-space: nowrap;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .scroll-left {
+            animation-name: scrollLeft;
+        }
+
+        .scroll-right {
+            animation-name: scrollRight;
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .carousel-row:hover .scroll-track {
+            animation-play-state: paused;
+        }
+
+        .partner-card {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 30px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .partner-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .partner-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+            padding: 20px;
+            background-color: white;
+            filter: grayscale(100%) contrast(0.8);
+            transition: filter 0.3s;
+        }
+
+        .partner-card:hover img {
+            filter: grayscale(0) contrast(1);
+        }
+
+        .partner-card a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient-1);
+            color: var(--text);
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .cta-section h2 {
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary);
+            color: var(--secondary);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(220, 181, 0, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text);
+            border: 2px solid var(--text);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .partner-card {
+                width: 120px;
+                height: 120px;
+                margin: 0 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .value-props {
+                grid-template-columns: 1fr;
+            }
+
+            .partner-card {
+                width: 100px;
+                height: 100px;
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+  
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <h2>Working with Clients to Create Value</h2>
+            <p>We help you focus on your core value proposition by taking stock of the variables that drive your business forward.</p>
+            <a href="#contact" class="btn btn-primary">Contact Our Team</a>
+        </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Value Framework</h2>
+                <p>We combine strategic vision with operational excellence to deliver measurable results for our clients</p>
+            </div>
+            <div class="value-props">
+                <div class="value-card">
+                    <div class="value-number">1</div>
+                    <h3>Alliances & Partnerships</h3>
+                    <p>Building strategic relationships that create mutual value and drive market innovation</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">2</div>
+                    <h3>Investor Relations</h3>
+                    <p>Transparent communication that builds trust and aligns stakeholder interests</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">3</div>
+                    <h3>Corporate Sustainability</h3>
+                    <p>Integrating ESG principles to create long-term value and positive impact</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Commitment Section -->
+<section class="section commitment">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Commitment</h2>
+            <p>Building Greater Futures Through Collaboration</p>
+        </div>
+        <div class="commitment-content">
+            <div class="commitment-item">
+                <div class="commitment-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h4>In It for Good</h4>
+                <p>We think long term, and we want to create meaningful innovation through shared purpose.</p>
+            </div>
+            <div class="commitment-item">
+                <div class="commitment-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h4>Bring it All</h4>
+                <p>We commit every resource and all our means to achieve success in our shared goal.</p>
+            </div>
+            <div class="commitment-item">
+                <div class="commitment-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h4>Know-How</h4>
+                <p>We deploy our expertise along with real world experience to achieve tangible results.</p>
+            </div>
+            <div class="commitment-item">
+                <div class="commitment-icon">
+                    <i class="fas fa-route"></i>
+                </div>
+                <h4>It's the Journey</h4>
+                <p>We are with you every step of the way, working closely to improvise, adapt and deliver.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .commitment-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+    }
+    
+    .commitment-item {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transition: all 0.5s ease;
+        transform: translateY(50px);
+        opacity: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .commitment-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 0;
+        background: linear-gradient(to bottom, #4facfe, #00f2fe);
+        transition: height 0.6s ease;
+    }
+    
+    .commitment-item.animated {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .commitment-item.animated::before {
+        height: 100%;
+    }
+    
+    .commitment-item:hover {
+        transform: translateY(-10px) !important;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    
+    .commitment-icon {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #4facfe;
+        display: inline-block;
+        transform: scale(0);
+        transition: transform 0.6s ease;
+    }
+    
+    .commitment-item.animated .commitment-icon {
+        transform: scale(1);
+    }
+    
+    .commitment-item h4 {
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .commitment-item h4::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #4facfe;
+        transition: width 0.5s ease;
+    }
+    
+    .commitment-item:hover h4::after {
+        width: 100%;
+    }
+    
+    .commitment-item p {
+        line-height: 1.6;
+        transition: color 0.3s ease;
+    }
+    
+    .commitment-item:hover p {
+        color: #555;
+    }
+    
+    .section-title h2 {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .section-title h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        border-radius: 2px;
+        animation: underlineGrow 1.5s ease forwards;
+    }
+    
+    @keyframes underlineGrow {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 80px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const commitmentItems = document.querySelectorAll('.commitment-item');
+        
+        // Function to check if element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75
+            );
+        }
+        
+        // Function to add animation class
+        function animateOnScroll() {
+            commitmentItems.forEach((item, index) => {
+                if (isInViewport(item)) {
+                    setTimeout(() => {
+                        item.classList.add('animated');
+                    }, index * 200);
+                }
+            });
+        }
+        
+        // Initial check
+        animateOnScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Add hover effect to icons
+        commitmentItems.forEach(item => {
+            const icon = item.querySelector('.commitment-icon i');
+            
+            item.addEventListener('mouseenter', () => {
+                icon.style.animation = 'iconPulse 1s ease';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                icon.style.animation = '';
+            });
+        });
+    });
+    
+    // Add keyframes for icon pulse
+    const style = document.createElement('style');
+    style.innerHTML = `
+        @keyframes iconPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+
+    <!-- Market Making Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>We Make Markets So Our Clients Can Make Change</h2>
+                <p>Our integrated approach combines deep industry knowledge with cutting-edge methodologies</p>
+            </div>
+            <div class="value-props">
+                <div class="value-card">
+                    <h3><i class="fas fa-binoculars"></i> Vision</h3>
+                    <p>Forward-thinking strategies that anticipate market shifts and position you for success</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-search"></i> Research</h3>
+                    <p>Data-driven insights that uncover opportunities and inform decision-making</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-shield-alt"></i> Integrity</h3>
+                    <p>Uncompromising ethical standards that build trust and reputation</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-microchip"></i> Digital</h3>
+                    <p>Technology solutions that transform operations and create competitive advantage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn More Section -->
+    <section class="section" style="background-color: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Learn More About Our Approach</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>Today, we work closely with clients to embrace a transformational approach aimed at benefiting all stakeholders—empowering organizations to grow, build sustainable competitive advantage, and drive positive societal impact. Our diverse, global teams are passionate about unlocking potential and making change happen, delivering integrated solutions through leading-edge management consulting, technology and design, and corporate and digital ventures.</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 2rem;">See What's New</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Carousel Section -->
+    <section class="section partners-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>A Worldwide Network of Partners</h2>
+                <p>We collaborate with industry leaders and innovators across the globe</p>
+            </div>
+            
+            <!-- First Carousel Row (Right to Left) -->
+            <div class="carousel-row">
+                <div class="scroll-track scroll-right">
+                    <div class="partner-card"><a href="https://www.amplitechgroup.com/"><img src="Picture1-removebg-preview.png" alt="amplitechgroup"></a></div>
+                    <div class="partner-card"><a href="https://coeptistx.com/"><img src="Picture2-removebg-preview.png" alt="coeptis"></a></div>
+                    <div class="partner-card"><a href="https://www.tgipower.com/"><img src="Picture3.jpg" alt="TGI Power"></a></div>
+                    <div class="partner-card"><a href="http://axi.rocks/"><img src="Picture4-removebg-preview.png" alt="axi"></a></div>
+                    <div class="partner-card"><a href="http://www.ealixir.com/"><img src="Picture5-removebg-preview.png" alt="ealixir"></a></div>
+                    <div class="partner-card"><a href="https://www.qkinnovation.com/"><img src="Picture6-removebg-preview.png" alt="qkinnovation"></a></div>
+                    <div class="partner-card"><a href="http://xeriant.com/"><img src="Picture7-removebg-preview.png" alt="xeriant"></a></div>
+                    
+                    
+                    <!-- Duplicates for seamless looping -->
+                    <div class="partner-card"><a href="https://www.amplitechgroup.com/"><img src="Picture1-removebg-preview.png" alt="amplitechgroup"></a></div>
+                    <div class="partner-card"><a href="https://coeptistx.com/"><img src="Picture2-removebg-preview.png" alt="coeptis"></a></div>
+                    <div class="partner-card"><a href="https://www.tgipower.com/"><img src="Picture3.jpg" alt="TGI Power"></a></div>
+                    <div class="partner-card"><a href="http://axi.rocks/"><img src="Picture4-removebg-preview.png" alt="axi"></a></div>
+                    <div class="partner-card"><a href="http://www.ealixir.com/"><img src="Picture5-removebg-preview.png" alt="ealixir"></a></div>
+                    <div class="partner-card"><a href="https://www.qkinnovation.com/"><img src="Picture6-removebg-preview.png" alt="qkinnovation"></a></div>
+                    <div class="partner-card"><a href="http://xeriant.com/"><img src="Picture7-removebg-preview.png" alt="xeriant"></a></div>
+                   
+                </div>
+            </div>
+            
+           
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Do you have any questions?</h2>
+            <p>Our team of experts is ready to discuss how we can help your organization achieve its strategic objectives.</p>
+            <a href="#" class="btn btn-outline">Contact Us</a>
+        </div>
+    </section>
+
+</body>
+</html>
